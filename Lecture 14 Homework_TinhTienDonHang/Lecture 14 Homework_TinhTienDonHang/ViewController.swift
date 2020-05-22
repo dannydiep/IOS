@@ -80,10 +80,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             self.present(alertQuantity, animated: true, completion: nil)
             
+            print("cannot be smaller than 0")
+            
         }else{
             mangFood[sender.tag].Quantity = mangFood[sender.tag].Quantity - 1
             countTotalBill()
             myTable.reloadData()
+            
         }
         
         
