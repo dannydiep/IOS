@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lecture14_TableView___Recap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4K-gO-BUp" userLabel="ViewXanh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9j3-JB-vpY">
+                                        <rect key="frame" x="172" y="30.5" width="70" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="5jC-KO-LlV"/>
+                                            <constraint firstAttribute="width" constant="70" id="boh-xC-2pW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9j3-JB-vpY" firstAttribute="centerX" secondItem="G4K-gO-BUp" secondAttribute="centerX" id="aAq-M2-cFZ"/>
+                                    <constraint firstItem="9j3-JB-vpY" firstAttribute="centerY" secondItem="G4K-gO-BUp" secondAttribute="centerY" id="trV-KX-sjf"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yMr-vm-BKI">
+                                <rect key="frame" x="0.0" y="126" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CELL" rowHeight="155" id="vw2-eg-H4n" userLabel="CELL" customClass="DONGTableViewCell" customModule="Lecture14_TableView___Recap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="155"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vw2-eg-H4n" id="jXF-HD-Yk0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8BW-Po-3tb">
+                                                    <rect key="frame" x="184" y="62" width="49" height="31"/>
+                                                    <connections>
+                                                        <action selector="CHON:" destination="vw2-eg-H4n" eventType="valueChanged" id="JsV-qA-YFz"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8BW-Po-3tb" firstAttribute="centerX" secondItem="jXF-HD-Yk0" secondAttribute="centerX" id="1wP-TQ-QP5"/>
+                                                <constraint firstItem="8BW-Po-3tb" firstAttribute="centerY" secondItem="jXF-HD-Yk0" secondAttribute="centerY" id="rBg-Vi-10r"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="swt" destination="8BW-Po-3tb" id="KDB-XP-34F"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yMr-vm-BKI" secondAttribute="bottom" id="1Rk-uk-DKU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G4K-gO-BUp" secondAttribute="trailing" id="2md-Kh-iKb"/>
+                            <constraint firstItem="G4K-gO-BUp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CGc-QU-uxi"/>
+                            <constraint firstItem="G4K-gO-BUp" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1:10" id="NYI-Jb-Cji"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yMr-vm-BKI" secondAttribute="trailing" id="aKh-ZK-ufI"/>
+                            <constraint firstItem="G4K-gO-BUp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iIv-0t-q1X"/>
+                            <constraint firstItem="yMr-vm-BKI" firstAttribute="top" secondItem="G4K-gO-BUp" secondAttribute="bottom" id="ki2-Ks-12Y"/>
+                            <constraint firstItem="yMr-vm-BKI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y08-C7-9K2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="9j3-JB-vpY" id="Oul-hY-esD"/>
+                        <outlet property="myTable" destination="yMr-vm-BKI" id="oNs-BC-imd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
